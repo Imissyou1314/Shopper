@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:hint="商品名"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_good_name"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:inputType="text" />
+
+    <EditText
+        android:hint="简介"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:id="@+id/good_good_desc"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/good_good_name" />
+
+    <EditText
+        android:hint="数量"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_good_number"
+        android:layout_below="@+id/good_good_desc"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:inputType="number" />
+    <EditText
+        android:hint="单价"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_good_price"
+        android:textSize="18sp"
+        android:layout_below="@+id/good_good_number"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:inputType="number" />
+
+    <TextView
+        android:text="修改时间"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_update_time"
+        android:textSize="15sp"
+        android:layout_below="@+id/good_good_price"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_add_good"
+        android:id="@+id/good_good_image"
+        android:layout_below="@+id/good_update_time"
+        android:layout_above="@+id/good_update_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="105dp" />
+
+
+    <Button
+        android:text="修改"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_update_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="下架"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_chekc_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="删除"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_delete_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:hint="商品名"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/add_good_name"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:hint="商品简介"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_good_desc"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/add_good_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:hint="商品数量"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_good_number"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_below="@+id/add_good_desc"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:inputType="number" />
+
+    <EditText
+        android:hint="商品默认数量"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/add_good__default_number"
+        android:layout_below="@+id/add_good_number"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:inputType="number" />
+
+    <EditText
+        android:hint="商品单价"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_good_price"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/add_good__default_number"
+        android:textAlignment="center"
+        android:inputType="number" />
+
+    <Button
+        android:text="提交"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_good_submit"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/add_good_image"
+        android:src="@drawable/ic_upload_file_24dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_good_submit"
+        android:layout_marginBottom="90dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
