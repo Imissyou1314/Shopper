@@ -7,13 +7,16 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.boyapp.missyou.shopper.R;
 import com.boyapp.missyou.shopper.entity.Goods;
 import com.boyapp.missyou.shopper.presenter.ShopPresenter;
 import com.boyapp.missyou.shopper.presenter.impl.ShopPresenterImpl;
+import com.boyapp.missyou.shopper.utils.Comment;
 import com.boyapp.missyou.shopper.utils.GsonUtils;
 import com.boyapp.missyou.shopper.view.ShopView;
+import com.bumptech.glide.Glide;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
@@ -73,6 +76,12 @@ public class ShopActivity  extends Activity implements ShopView {
                 holder.setText(R.id.item_goods_name, goods.getName());
                 holder.setText(R.id.item_goods_price, "单价 :" + goods.getPrice());
                 holder.setText(R.id.item_goods_number, "数量 :" + goods.getNumber());
+
+                Glide
+                        .with(holder.getConvertView().getContext())
+                        .load(Comment.BASE_URL + Comment.IMAGE_URL + goods.getGoodImg())
+                        .into((ImageView) holder.getView(R.id.item_goods_image));
+
             }
         };
 

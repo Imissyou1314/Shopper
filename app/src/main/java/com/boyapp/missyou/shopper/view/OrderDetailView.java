@@ -1,4 +1,4 @@
-package com.boyapp.missyou.shopper.activity;
+package com.boyapp.missyou.shopper.view;
 
 import com.boyapp.missyou.shopper.entity.OrderDetail;
 import com.boyapp.missyou.shopper.view.BaseView;

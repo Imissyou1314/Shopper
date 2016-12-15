@@ -12,6 +12,7 @@ import com.boyapp.missyou.shopper.entity.Orders;
 import com.boyapp.missyou.shopper.presenter.OrderDetailPresenter;
 import com.boyapp.missyou.shopper.presenter.impl.OrderDetaliPresenterImpl;
 import com.boyapp.missyou.shopper.utils.GsonUtils;
+import com.boyapp.missyou.shopper.view.OrderDetailView;
 import com.orhanobut.logger.Logger;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
@@ -25,7 +26,7 @@ import butterknife.ButterKnife;
 /**
  * Created by MissYou on 2016/12/12.
  */
-public class OrderDetailActivity extends Activity implements OrderDetailView{
+public class OrderDetailActivity extends Activity implements OrderDetailView {
 
     @BindView(R.id.order_detail_userName)
     TextView userName;

@@ -18,7 +18,7 @@ public interface GoodsPresenter extends BasePresenter {
      * @param goodsId
      * @param status
      */
-    void checkGoods(int goodsId , Boolean status);
+    void checkGoods(int goodsId , Integer status);
 
     /**
      * 更新商品

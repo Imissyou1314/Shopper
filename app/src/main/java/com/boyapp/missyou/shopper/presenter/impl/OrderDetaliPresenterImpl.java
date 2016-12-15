@@ -2,7 +2,7 @@ package com.boyapp.missyou.shopper.presenter.impl;
 
 import android.util.Log;
 
-import com.boyapp.missyou.shopper.activity.OrderDetailView;
+import com.boyapp.missyou.shopper.view.OrderDetailView;
 import com.boyapp.missyou.shopper.entity.OrderDetail;
 import com.boyapp.missyou.shopper.entity.ResultBean;
 import com.boyapp.missyou.shopper.model.OrderDetailModel;

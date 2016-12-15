@@ -7,12 +7,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.boyapp.missyou.shopper.activity.ApplyShopperActivity;
 import com.boyapp.missyou.shopper.activity.OrderDetailActivity;
 import com.boyapp.missyou.shopper.activity.ShopActivity;
+import com.boyapp.missyou.shopper.activity.ShopperInfoActivity;
 import com.boyapp.missyou.shopper.entity.Orders;
 import com.boyapp.missyou.shopper.presenter.OrdersPresenter;
 import com.boyapp.missyou.shopper.presenter.impl.OrdersPresenterImpl;
 import com.boyapp.missyou.shopper.utils.GsonUtils;
+import com.boyapp.missyou.shopper.utils.SPUtils;
 import com.boyapp.missyou.shopper.view.MainView;
 import com.orhanobut.logger.Logger;
 import com.zhy.adapter.recyclerview.CommonAdapter;
@@ -58,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
                 holder.setText(R.id.order_user_name, orders.getName());
                 holder.setText(R.id.order_user_phone, orders.getPhone());
                 holder.setText(R.id.order_totle_price, orders.getTotalPrice() + "");
+                holder.setText(R.id.order_pay_way, orders.getPayType() == 2 ? "线下支付":"在线支付");
+                holder.setText(R.id.order_pay_status, orders.getStatus() == 1 ? "未支付":"以支付支付");
                 holder.setOnClickListener(R.id.order_rece_btn, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -156,15 +161,22 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @OnClick(R.id.main_user)
     void goUser() {
-//        Intent intent = new Intent(this,)
+        Intent intent = null;
+        if (null == SPUtils.getSp_user().getString("user", null)) {
+            intent = new Intent(this, ApplyShopperActivity.class);
+        } else {
+            intent = new Intent(this, ShopperInfoActivity.class);
+        }
+        startActivity(intent);
     }
 
     @Override
     public void setInitView(List ordersList) {
+        mOrdersList.clear();
         if (null != ordersList && ordersList.size() != 0) {
-            mOrdersList.clear();
             mOrdersList.addAll(ordersList);
         }
+        Logger.d("刷新数据");
         mAdapter.notifyDataSetChanged();
     }
 

@@ -27,11 +27,11 @@ public class GoodModelImpl implements GoodModel {
     }
 
     @Override
-    public void checkGoods(int goodsId, Boolean status) {
+    public void checkGoods(int goodsId, Integer status) {
         String url = null;
-        if (status) {
+        if (status == 1) {
             url = Comment.BASE_URL + Comment.GOOD_ON_SHELVES + goodsId;
-        } else {
+        } else if (status == 2){
            url = Comment.BASE_URL + Comment.GOOD_OFF_SHELVES + goodsId;
         }
         HttpParams params = new HttpParams();

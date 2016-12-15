@@ -36,7 +36,7 @@ public class GoodsPresenterImpl implements GoodsPresenter {
     }
 
     @Override
-    public void checkGoods(int goodsId, Boolean status) {
+    public void checkGoods(int goodsId, Integer status) {
         mGoodModel.checkGoods(goodsId, status);
     }
 

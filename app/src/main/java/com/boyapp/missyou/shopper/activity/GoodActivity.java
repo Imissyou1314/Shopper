@@ -60,10 +60,10 @@ public class GoodActivity extends Activity implements GoodView {
         goodName.setHint(goods.getName());
         goodName.setHint(goods.getName());
         goodDesc.setHint(goods.getIntroduce());
-        goodNumber.setHint(goods.getNumber());
+        goodNumber.setHint(goods.getNumber() + "");
         goodPrice.setHint(goods.getPrice() + "");
 
-        if (goods.isInUse()) {
+        if (goods.getStatus() == 1) {
             checkBtn.setText("下架商品");
         } else {
             checkBtn.setText("上架商品");
@@ -100,7 +100,7 @@ public class GoodActivity extends Activity implements GoodView {
 
     @OnClick(R.id.good_chekc_btn)
     protected  void checkGoods() {
-            mGoodsPresenter.checkGoods(goods.getId(), !goods.isInUse());
+            mGoodsPresenter.checkGoods(goods.getId(), goods.getStatus() == 1 ? 2 : 1);
     }
 
     @OnClick(R.id.good_update_btn)

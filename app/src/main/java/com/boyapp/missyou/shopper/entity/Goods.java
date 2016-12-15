@@ -28,10 +28,6 @@ public class Goods implements Serializable {
 	 */
 	private String introduce;
 	/**
-	 * 是否上架
-	 */
-	private boolean inUse;
-	/**
 	 * 商品数量
 	 */
 	private int number;
@@ -104,9 +100,6 @@ public class Goods implements Serializable {
 		return number;
 	}
 
-	public boolean isInUse(){
-		return inUse;
-	}
 
 	public boolean isPass(){
 		return pass;
@@ -124,13 +117,6 @@ public class Goods implements Serializable {
 		this.classification = classification;
 	}
 
-	/**
-	 * 
-	 * @param inUse
-	 */
-	public void setInUse(boolean inUse){
-		this.inUse = inUse;
-	}
 
 	/**
 	 * 
@@ -274,7 +260,6 @@ public class Goods implements Serializable {
 				", defNumber=" + defNumber +
 				", goodImg='" + goodImg + '\'' +
 				", introduce='" + introduce + '\'' +
-				", inUse=" + inUse +
 				", number=" + number +
 				", pass=" + pass +
 				", price=" + price +

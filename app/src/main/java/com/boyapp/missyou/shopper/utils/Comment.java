@@ -10,14 +10,16 @@ import com.boyapp.missyou.shopper.entity.User;
 public class Comment {
 
     public static User user;
-
     //TODO
     public static Integer TestShopId;
+
     /**
      * 服务器地址
      */
-    public static final String BASE_URL = "http://172.16.13.28:9001";
-//    public static final String BASE_URL = "http://192.168.31.56:9001/";
+//    public static final String BASE_URL = "http://172.16.13.28:9001";
+    
+    public static final String IMAGE_URL = "/imageware/";
+        public static final String BASE_URL = "http://192.168.31.57:9001/";
     //商家未浏览订单
     public static final String Order_Shop_unWathc = "/orders/shop/unwatch/";
     //商家接单
